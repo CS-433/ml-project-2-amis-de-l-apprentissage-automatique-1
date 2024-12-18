@@ -1,6 +1,6 @@
 # Graph Neural Networks for Mid-Price Movement Forecasting in Limit Order Books
 
-### Authors: Božo Đerek, Benedicte Gabelica, and Karlo Vrančić
+### Authors: Božo Đerek, Benedicte Gabelica, Karlo Vrančić
 
 ---
 
