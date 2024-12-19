@@ -1,11 +1,22 @@
 import pandas as pd
 import argparse
+import zipfile
+import os
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--horizon", type=int, required=True, help="The horizon value to use for extracting the target (1, 2, 3, 5, or 10).")
 
 args = parser.parse_args()
 horizon = args.horizon
+
+# unzip and put in main directory
+build_path = os.path.abspath(__file__)
+directory_main = os.path.dirname(os.path.dirname(build_path))
+
+zip_file = os.path.join(directory_main, "train_test.zip")
+
+with zipfile.ZipFile(zip_file, 'r') as zip_ref:
+    zip_ref.extractall(directory_main)
 
 # index of column depending on wanted horizon
 horizon_label = {10: -1, 5: -2, 3: -3, 2: -4, 1: -5}
