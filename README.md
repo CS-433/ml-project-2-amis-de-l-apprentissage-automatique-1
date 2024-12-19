@@ -19,6 +19,7 @@ In this paper, we propose representing LOBs as graphs and use Graph Neural Netwo
 ---
 
 ### StemGNN
+**Note**: If you do not have the datasets already, unzip the train_test.zip file and move the train.csv and test.csv files into the root directory of the repository. The datasets used here are a subset of the columns from the [FI-2010](http://dx.doi.org/10.1002/for.2543) dataset (only prices and volumes for 10 bid and ask levels were kept as features, as well as the labels for all 5 horizons). 
 
 We adapted the StemGNN to predict mid-price movement. To start training the model, please follow these steps:
 
