@@ -5,9 +5,11 @@
 ---
 
 ## Introduction
-Time-series forecasting using Limit Order Books (LOBs) plays a crucial role when forecasting short-term stock price movements. Specifically, predicted metrics such as mid-price movement or volatility contain valuable information for traders and investors and can be of great help when analyzing the market. Therefore, it is important to identify the most effective machine learning models and data representation for accurate forecasting.
+Predicting mid-price movements is a critical challenge in financial markets, as accurate predictions are important for good trading strategies and market efficiency. The mid-price, derived from the best bid and ask prices, is an essential indicator of market trends. High-frequency limit order book data provides a rich source of information for predicting these movements, but the data's complexity and imbalance pose significant challenges.
 
-In this paper, we propose representing LOBs as graphs and use Graph Neural Networks (GNNs) to predict mid-price movement. The models we used to forecast mid-price movement are adaptations of [MTGNN](https://arxiv.org/abs/2005.11650) and [StemGNN](https://arxiv.org/abs/2103.07719). The code used for all calculations is given in this repository.
+This project addresses the problem of mid-price movement prediction as a ternary classification task, where the goal is to determine whether the mid-price will move up, down, or remain stationary over a given time horizon. We apply Graph Neural Networks (GNNs), which are well-suited for modeling complex relational data. We use a common benchmark LOB dataset and evaluate our results against established models in the literature. Additionally, we tackle the challenge of label imbalance, a frequent issue in financial datasets, to improve prediction accuracy.
+
+The models we used to forecast mid-price movement are adaptations of [MTGNN](https://arxiv.org/abs/2005.11650) and [StemGNN](https://arxiv.org/abs/2103.07719). The code used for all calculations is given in this repository.
 
 ---
 
